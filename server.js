@@ -6,10 +6,10 @@ app.use(express.static('public'));
 
 // Création de la connexion de mysql avec le site
 let connection = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'toor',
-    database: 'Mediatheque'
+    host: 'sql7.freemysqlhosting.net',
+    user: 'sql7244577',
+    password: 'hY7L4pP1xD',
+    database: 'sql7244577'
 });
 //Utilisation de body-parser par le serveur
 app.use(bodyparser.urlencoded({extended: false}));

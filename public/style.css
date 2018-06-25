@@ -33,3 +33,8 @@ a:hover {
 .type4{
     background-color: lightyellow;
 }
+
+.imgbook{
+    height: auto;
+    max-width:350px;
+}
