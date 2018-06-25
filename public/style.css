@@ -1,0 +1,35 @@
+body {
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+
+a:hover {
+    text-decoration:none;
+    color:black;
+}
+
+.card-hl:hover{
+    background-color: azure;
+}
+
+.type1{
+    background-color: lightblue;
+}
+
+.type2{
+    background-color: lightcoral;
+}
+
+.type3{
+    background-color: lightgreen;
+}
+
+.type4{
+    background-color: lightyellow;
+}

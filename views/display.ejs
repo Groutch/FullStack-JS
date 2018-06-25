@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        <%= doc.Titre %>
+    </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand text-center" href="/">Médiathèque!</a>
+        <form class="form-inline my-2 my-lg-0" action="/searchdoc" method="post">
+            <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Rechercher" name="searchitem">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher Document</button>
+        </form>
+    </nav>
+    <div class="container" id="displayDoc">
+        <div class="card">
+            <% if(doc.id_Type == 1) {%>
+                <img id="imgbook" class="card-img-top" src="" alt="Card image cap">
+            <% } %>
+            <div class="card-body">
+                <h5 class="card-title" id="titledoc"><%= doc.Titre %></h5>
+                <p class="card-text">Auteur:<%= doc.Auteur %></p>
+                <% if(doc.id_Type == 1) {%>
+                    <p class="card-text" id="descbook"></p>
+                <% } %>
+            </div>
+            <div class="card-footer">
+                <a href="addcart/<%= doc.id_Document%>" class="btn btn-primary">Reserver</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+    <script src="/maindisplay.js"></script>
+</body>
+
+</html>
