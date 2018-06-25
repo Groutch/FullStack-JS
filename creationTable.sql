@@ -43,4 +43,17 @@ CREATE TABLE Document (
   FOREIGN KEY (id_Document) REFERENCES Document(id_Document),
   FOREIGN KEY (id_Reservation) REFERENCES Reservation(id_Reservation)
   );
-  
+/* insertion type documents */
+INSERT INTO Type_Document (Nom_Type)
+VALUES ("Livre"),("CD"),("DVD"),("Partitions");
+
+/* insertion dans la table Document */
+INSERT INTO Document (Titre, Auteur, Date_Sortie, Emprunt, id_Type)
+VALUES("Le petit Prince", "Saint-Exupery","1943-01-01",0,1),
+("Guerre et Paix", "Léon Tolstoï","1865-01-01",0,1),
+("Donnie Darko","Richard Kelly","2001-01-19",0,3),
+("Je dis aime","-M-","1999-10-25",0,2),
+("... And Justice For All","Metallica","1988-08-25",0,2),
+("La flute en chantier","Moe Zart","1791-09-30",0,4),
+("Ink","Jamin Winans","2009-01-23",0,3),
+("HALLELUJAH","Jeff Buckley","1994-01-01",0,4);
